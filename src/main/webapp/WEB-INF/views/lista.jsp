@@ -22,7 +22,9 @@
 </p>
 
 <c:if test="${not empty mensaje}">
-    <p class="alert-success">${mensaje}</p>
+    <p class="alert-success">
+        <fmt:message key="${mensaje}"/>
+    </p>
 </c:if>
 
 <a href="<c:url value="/productos?accion=formulario"/>">+ <fmt:message key="menu.nuevo"/></a>

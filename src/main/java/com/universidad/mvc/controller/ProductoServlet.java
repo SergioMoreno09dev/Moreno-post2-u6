@@ -113,7 +113,7 @@ public class ProductoServlet extends HttpServlet {
         }
 
         service.guardar(new Producto(0, nombre.trim(), categoria, precio, stock));
-        resp.sendRedirect(req.getContextPath() + "/productos?mensaje=Producto+guardado+exitosamente");
+        resp.sendRedirect(req.getContextPath() + "/productos?mensaje=msg.guardado");
     }
 
     private void actualizar(HttpServletRequest req, HttpServletResponse resp)
@@ -121,16 +121,14 @@ public class ProductoServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
         Producto p = extraerProducto(req, id);
         service.actualizar(p);
-        resp.sendRedirect(req.getContextPath()
-                + "/productos?mensaje=Producto+actualizado");
+        resp.sendRedirect(req.getContextPath() + "/productos?mensaje=msg.actualizado");
     }
 
     private void eliminar(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         service.eliminar(id);
-        resp.sendRedirect(req.getContextPath()
-                + "/productos?mensaje=Producto+eliminado");
+        resp.sendRedirect(req.getContextPath() + "/productos?mensaje=msg.eliminado");
     }
 
     private Producto extraerProducto(HttpServletRequest req, int id) {
