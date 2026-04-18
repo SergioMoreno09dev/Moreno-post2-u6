@@ -5,20 +5,36 @@
 <title>${empty producto ? "Nuevo Producto" : "Editar Producto"}</title>
 <link rel="stylesheet" href="<c:url value="/css/estilos.css"/>">
 </head><body>
+
 <h1>${empty producto ? "Registrar Producto" : "Editar Producto"}</h1>
 <form method="post" action="<c:url value="/productos"/>">
+
+    <c:if test="${not empty errores}">
+    <div class="alert-error">
+        <ul><c:forEach
+                var="e"
+                items="${errores}"><li>${e.value}</li></c:forEach></ul>
+    </div>
+    </c:if>
+
     <c:if test="${not empty producto}">
         <input type="hidden" name="id"
                value="${producto.id}">
         <input type="hidden" name="accion" value="actualizar">
     </c:if>
+
     <c:if test="${empty producto}">
         <input type="hidden" name="accion" value="guardar">
     </c:if>
+
     <label>Nombre:
-        <input type="text" name="nombre" required
-               value="<c:out value="${producto.nombre}"/>">
+    <input type="text" name="nombre" value="<c:out value="${nombre}"/>"
+           class="${not empty errores.nombre ? 'input-error' : ''}">
+    <c:if test="${not empty errores.nombre}">
+        <span class="campo-error">${errores.nombre}</span>
+    </c:if>
     </label>
+
     <label>Categoría:
         <input type="text" name="categoria"
                value="<c:out value="${producto.categoria}"/>">
