@@ -1,0 +1,190 @@
+/* ========== Reset y base ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========== Contenedor principal ========== */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ========== Encabezado de página ========== */
+h1 {
+    font-size: 1.6rem;
+    color: #1a3a5c;
+    margin-bottom: 1rem;
+}
+
+/* ========== Alerta de éxito ========== */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 1rem;
+}
+
+/* ========== Enlace / botón de acción ========== */
+a {
+    color: #1a3a5c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-nuevo {
+    display: inline-block;
+    background-color: #1a3a5c;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+}
+
+.btn-nuevo:hover {
+    background-color: #14304f;
+    text-decoration: none;
+}
+
+/* ========== Tabla de productos ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #1a3a5c;
+    color: #fff;
+}
+
+thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Filas alternadas */
+tbody tr.par   { background-color: #ffffff; }
+tbody tr.impar { background-color: #f0f4f8; }
+
+tbody tr:hover {
+    background-color: #e8eef5;
+}
+
+/* ========== Formulario ========== */
+form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    max-width: 480px;
+    border: 1px solid #ddd;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #444;
+}
+
+label input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+label input:focus {
+    outline: none;
+    border-color: #1a3a5c;
+}
+
+button[type="submit"] {
+    background-color: #1a3a5c;
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #14304f;
+}
+
+/* ========== Página de error ========== */
+.error-box {
+    background-color: #fff;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 2rem;
+    max-width: 520px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.error-titulo {
+    color: #a32d2d;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.error-mensaje {
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.error-detalle {
+    background-color: #fff5f5;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #791f1f;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #1a3a5c;
+    border-radius: 4px;
+    color: #1a3a5c;
+    font-size: 14px;
+}
+
+.btn-volver:hover {
+    background-color: #1a3a5c;
+    color: #fff;
+    text-decoration: none;
+}
